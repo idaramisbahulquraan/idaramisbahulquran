@@ -1208,6 +1208,10 @@
                                                         <a href="online-admission.html" class="hfe-menu-item">Online
                                                             Admission</a>
                                                     </li>
+
+<li id="menu-item-scholarship" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu">
+    <a href="scholarship.html" class="hfe-menu-item">Scholarship</a>
+</li>
                                                     <li id="menu-item-691"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu">
                                                         <a href="gallery.html" class="hfe-menu-item">Gallery</a>
@@ -1322,6 +1326,20 @@
                 </nav>
 
                 <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+                    <!-- Tabs -->
+                    <div class="mb-6 border-b border-gray-200">
+                        <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+                            <button id="tabAdmissions" onclick="window.switchTab('admissions')"
+                                class="border-brand-teal text-brand-teal whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                                Online Admissions
+                            </button>
+                            <button id="tabScholarships" onclick="window.switchTab('scholarships')"
+                                class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                                Scholarship Applications
+                            </button>
+                        </nav>
+                    </div>
+
                     <!-- Stats -->
                     <div class="mb-6">
                         <div class="bg-white overflow-hidden shadow rounded-lg">
@@ -1377,6 +1395,7 @@
                 </main>
             </div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
         <script type="module" src="js/admin.js"></script>
         <footer itemtype="https://schema.org/WPFooter" itemscope="itemscope" id="colophon" role="contentinfo">
             <div class="footer-width-fixer">
@@ -1673,7 +1692,8 @@
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700">Admission Level</label>
-                                <select id="editAdmissionLevel" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-teal focus:ring-brand-teal sm:text-sm border p-2">
+                                <select id="editAdmissionLevel"
+                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-teal focus:ring-brand-teal sm:text-sm border p-2">
                                     <option value="">Select Level</option>
                                     <option value="Nazra">Nazra</option>
                                     <option value="Hifz">Hifz</option>
@@ -1683,7 +1703,8 @@
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700">Admission Class</label>
-                                <select id="editAdmissionClass" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-teal focus:ring-brand-teal sm:text-sm border p-2">
+                                <select id="editAdmissionClass"
+                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-teal focus:ring-brand-teal sm:text-sm border p-2">
                                     <option value="">Select Class</option>
                                     <option value="Mutwasta">Mutwasta</option>
                                     <option value="Aama Arabic (A)">Aama Arabic (A)</option>

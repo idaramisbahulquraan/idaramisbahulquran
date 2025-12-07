@@ -1209,7 +1209,6 @@
 <li id="menu-item-admission" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu">
     <a href="online-admission.html" class="hfe-menu-item">Online Admission</a>
 </li>
-
 <li id="menu-item-scholarship" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu">
     <a href="scholarship.html" class="hfe-menu-item">Scholarship</a>
 </li>
@@ -1270,8 +1269,8 @@
     <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
         <!-- Header -->
         <div class="bg-brand-teal px-8 py-6 text-white text-center">
-            <h1 class="text-3xl font-bold mb-2 font-urdu">آن لائن داخلہ فارم</h1>
-            <p class="text-blue-100">Online Admission Form</p>
+            <h1 class="text-3xl font-bold mb-2 font-urdu">درخواست برائے وظیفہ</h1>
+            <p class="text-blue-100">Scholarship Application Form</p>
         </div>
 
         <!-- Loading Overlay -->
@@ -1312,12 +1311,13 @@
             </div>
         </div>
 
-        <form id="admissionForm" class="p-8 space-y-8">
-            <!-- Student Information -->
+        
+        <form id="scholarshipForm" class="p-8 space-y-8">
+            <!-- 1. Personal Information -->
             <section>
                 <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2 flex items-center">
                     <span class="bg-brand-teal text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">1</span>
-                    Student Information / کوائف طالب علم
+                    Personal Information / ذاتی کوائف
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -1325,325 +1325,331 @@
                         <input type="text" name="studentName" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Admission Level / درجہ داخلہ</label>
-                        <select name="admissionLevel" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
-                            <option value="">Select Level</option>
-                            <option value="Nazra">Nazra / ناظرہ</option>
-                            <option value="Hifz">Hifz / حفظ</option>
-                            <option value="Tajweed">Tajweed / تجوید</option>
-                            <option value="Dars-e-Nizami">Dars-e-Nizami / درس نظامی</option>
-                        </select>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Father's Name / نام والد</label>
+                        <input type="text" name="fatherName" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Admission Class / نام کلاس</label>
-                        <select name="admissionClass" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
-                            <option value="">Select Class</option>
-                            <option value="Mutwasta">Mutwasta / متوسطہ</option>
-                            <option value="Aama Arabic (A)">Aama Arabic (A) / (عامہ عربی (A))</option>
-                            <option value="Aama Arabic (B)">Aama Arabic (B) / (عامہ عربی (B))</option>
-                            <option value="Aama English">Aama English / عامہ انگلش</option>
-                            <option value="Khasa - I">Khasa - I / خاصہ اول</option>
-                            <option value="Khasa - II">Khasa - II / خاصہ دوم</option>
-                            <option value="Matric">Matric / میٹرک</option>
-                            <option value="Intermediate (IX)">Intermediate (IX) / (IX) انٹرمیڈیٹ</option>
-                            <option value="Aalia - I (X)">Aalia - I (X) / (X) عالیہ اول</option>
-                            <option value="Aalia - II (XI)">Aalia - II (XI) / (XI) عالیہ دوم</option>
-                            <option value="Aalamia - I (XII)">Aalamia - I (XII) / (XII) عالمیہ اول</option>
-                            <option value="Aalamia - II">Aalamia - II / عالمیہ دوم</option>
-                        </select>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">CNIC / شناختی کارڈ نمبر</label>
+                        <input type="text" name="cnic" id="cnic_number" required placeholder="00000-0000000-0" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Father's CNIC / والد کا شناختی کارڈ نمبر</label>
+                        <input type="text" name="fatherCnic" placeholder="00000-0000000-0" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Date of Birth / تاریخ پیدائش</label>
                         <input type="date" name="dob" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">CNIC/B-Form / شناختی کارڈ نمبر</label>
-                        <input type="text" name="cnic" id="cnic_number" required placeholder="xxxxx-xxxxxxx-x" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Nationality / قومیت</label>
-                        <input type="text" name="nationality" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Religion / مذہب</label>
-                        <select name="religion" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
-                            <option value="Islam">Islam</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Father's/Guardian's Information -->
-            <section>
-                <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2 flex items-center">
-                    <span class="bg-brand-teal text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">2</span>
-                    Father's/Guardian's Information / کوائف والد/سرپرست
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Father's Name / نام والد</label>
-                        <input type="text" name="fatherName" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Father's CNIC / والد کا شناختی کارڈ نمبر</label>
-                        <input type="text" name="fatherCnic" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Guardian's Name (Optional) / نام سرپرست</label>
-                        <input type="text" name="guardianName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Guardian's CNIC (Optional) / سرپرست کا شناختی کارڈ نمبر</label>
-                        <input type="text" name="guardianCnic" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Father's Occupation / والد کا پیشہ</label>
-                        <input type="text" name="fatherOccupation" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Father's Monthly Income / والد کی ماہانہ آمدن</label>
-                        <input type="text" name="fatherIncome" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
-                    </div>
-                    <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Mobile Number / موبائل نمبر</label>
                         <input type="tel" name="contactNumber" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Business/Office Address / کاروبار/دفتر کا پتہ</label>
-                        <input type="text" name="businessAddress" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Father's Mobile Number / والد کا موبائل نمبر</label>
+                        <input type="tel" name="fatherContactNumber" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email / ای میل</label>
+                        <input type="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">WhatsApp Number / واٹس ایپ نمبر</label>
+                        <input type="tel" name="whatsapp" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
                     </div>
                     <div class="md:col-span-2">
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Is there any Aalim/Hafiz in family? / کیا خاندان میں کوئی عالم/حافظ ہے؟</label>
-                        <select name="aalimInFamily" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
-                            <option value="">Select / منتخب کریں</option>
-                            <option value="Yes">Yes / ہاں</option>
-                            <option value="No">No / نہیں</option>
-                        </select>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Address -->
-            <section>
-                <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2 flex items-center">
-                    <span class="bg-brand-teal text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">3</span>
-                    Address / پتہ
-                </h3>
-                <div class="space-y-4">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Current Address / موجودہ پتہ</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Present Address / موجودہ پتہ</label>
                         <textarea name="currentAddress" required rows="2" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent"></textarea>
                     </div>
-                    <div>
+                    <div class="md:col-span-2">
                         <label class="block text-sm font-medium text-gray-700 mb-1">Permanent Address / مستقل پتہ</label>
                         <textarea name="permanentAddress" required rows="2" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent"></textarea>
                     </div>
                 </div>
             </section>
 
-            <!-- Accommodation Type -->
+            <!-- 2. Educational Details -->
+            <section>
+                <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2 flex items-center">
+                    <span class="bg-brand-teal text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">2</span>
+                    Educational Details / تعلیمی کوائف
+                </h3>
+                <div class="space-y-4">
+                    <!-- Matriculation -->
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-gray-700 mb-3">Matriculation / میٹرک</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-1">Board/University</label>
+                                <input type="text" name="matricBoard" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-1">Marks Obtained</label>
+                                <input type="number" name="matricMarks" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-1">Percentage</label>
+                                <input type="text" name="matricPercentage" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Intermediate -->
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-gray-700 mb-3">Intermediate / انٹرمیڈیٹ</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-1">Board/University</label>
+                                <input type="text" name="interBoard" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-1">Marks Obtained</label>
+                                <input type="number" name="interMarks" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-1">Percentage</label>
+                                <input type="text" name="interPercentage" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Other (if applicable) / دیگر تعلیم</label>
+                        <input type="text" name="otherEdu" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Current Education -->
+            <section>
+                <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2 flex items-center">
+                    <span class="bg-brand-teal text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">3</span>
+                    Current Education / موجودہ تعلیم
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Field of Study / شعبہ</label>
+                        <input type="text" name="currentFieldOfStudy" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Present College/University / موجودہ ادارہ</label>
+                        <input type="text" name="currentInstitution" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Date of Admission / تاریخ داخلہ</label>
+                        <input type="date" name="admissionDate" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Financial Information / Bio Data -->
             <section>
                 <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2 flex items-center">
                     <span class="bg-brand-teal text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">4</span>
-                    Accommodation Type / اقامتی/غیر اقامتی
+                    Financial Information / مالی کوائف
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Accommodation Type / اقامتی/غیر اقامتی</label>
-                        <select name="accommodationType" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
-                            <option value="">Select / منتخب کریں</option>
-                            <option value="Residential">اقامتی / Residential (Boarding)</option>
-                            <option value="Non-Residential">غیر اقامتی / Non-Residential (Day Scholar)</option>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Father's Profession / والد کا پیشہ</label>
+                        <input type="text" name="fatherOccupation" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Father's Monthly Income / والد کی ماہانہ آمدن</label>
+                        <input type="text" name="fatherIncome" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Total Siblings / کل بہن بھائی</label>
+                        <input type="number" name="totalSiblings" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Siblings Studying / زیر تعلیم بہن بھائی</label>
+                        <input type="number" name="studyingSiblings" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Total Family Members / کل افراد خانہ</label>
+                        <input type="number" name="totalFamilyMembers" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Earning Members / کمانے والے افراد</label>
+                        <input type="number" name="earningMembers" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">House Status / رہائش</label>
+                        <select name="houseStatus" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
+                            <option value="Owned">Owned / ذاتی</option>
+                            <option value="Rented">Rented / کرایہ</option>
                         </select>
                     </div>
-                    <div class="text-sm text-gray-600 flex items-center">
-                        <p class="bg-yellow-50 p-3 rounded-lg border border-yellow-200">غیر اقامتی کی صورت میں دوماہ کے اندر مغرب تاعشاء حاضری کو یقینی بنائے گا۔</p>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Rent Amount (if rented) / کرایہ</label>
+                        <input type="text" name="rentAmount" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Monthly Electricity Bill / ماہانہ بجلی بل</label>
+                        <input type="text" name="electricityBill" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Transport / سواری</label>
+                        <input type="text" name="transport" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <h4 class="font-medium text-gray-700 mb-3 mt-2">Property Details / تفصیل جائیداد</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-1">Agricultural Land / زرعی زمین</label>
+                                <input type="text" name="propertyLand" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-1">Residential House / رہائشی مکان</label>
+                                <input type="text" name="propertyHouse" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-1">City Plots / شہری پلاٹ</label>
+                                <input type="text" name="propertyPlots" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-1">Shops/Other / دوکانات و دیگر</label>
+                                <input type="text" name="propertyShops" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-1">Cattle / مال مویشی</label>
+                                <input type="text" name="propertyCattle" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Justification for Financial Assistance / وظیفہ کی وجہ</label>
+                        <textarea name="scholarshipReason" required rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent" placeholder="Please explain why you need financial assistance..."></textarea>
                     </div>
                 </div>
             </section>
 
-            <!-- Previous Education -->
+            <!-- 5. Accommodation -->
             <section>
                 <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2 flex items-center">
                     <span class="bg-brand-teal text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">5</span>
-                    Previous Education / سابقہ تعلیم
+                    Accommodation / رہائش
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Previous Religious Education / سابقہ دینی تعلیم</label>
-                        <input type="text" name="previousReligiousEducation" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent" placeholder="دینی تعلیم کتنی حاصل کی">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Do you require accommodation? / کیا آپ کو رہائش درکار ہے؟</label>
+                        <select name="accommodationRequired" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
+                            <option value="No">No / نہیں</option>
+                            <option value="Yes">Yes / ہاں</option>
+                        </select>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Duration of Previous Religious Education / عرصہ سابقہ دینی تعلیم</label>
-                        <input type="text" name="religiousEducationDuration" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Secular Education Qualification / عصری تعلیمی قابلیت</label>
-                        <input type="text" name="secularEducation" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent" placeholder="میٹرک، انٹرمیڈیئٹ، وغیرہ">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Previous Educational Institute / سابقہ تعلیمی ادارہ</label>
-                        <input type="text" name="previousInstitute" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">If yes, specify type / اگر ہاں، تو قسم بتائیں</label>
+                        <input type="text" name="accommodationType" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
                     </div>
                 </div>
             </section>
 
-            <!-- Quran & Hifz Information -->
+            <!-- 6. References -->
             <section>
                 <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2 flex items-center">
                     <span class="bg-brand-teal text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">6</span>
-                    Quran & Hifz Information / قرآن و حفظ کی معلومات
+                    References / حوالہ جات
                 </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Hafiz/Non-Hafiz / حافظ/غیر حافظ</label>
-                        <select name="hafizStatus" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
-                            <option value="">Select / منتخب کریں</option>
-                            <option value="Hafiz">حافظ / Hafiz</option>
-                            <option value="Non-Hafiz">غیر حافظ / Non-Hafiz</option>
-                        </select>
+                <div class="space-y-6">
+                    <!-- Reference 1 -->
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-gray-700 mb-3">Reference 1</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-1">Name</label>
+                                <input type="text" name="ref1Name" required class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-1">Relationship</label>
+                                <input type="text" name="ref1Relation" required class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-1">Contact Number</label>
+                                <input type="tel" name="ref1Contact" required class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-1">Email</label>
+                                <input type="email" name="ref1Email" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Duration of Hifz / دورانیہ حفظ</label>
-                        <input type="text" name="hifzDuration" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent" placeholder="اگر حافظ ہیں تو دورانیہ لکھیں">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Quality of Quran Reading / قرآن مجید پڑھنے کی کیفیت</label>
-                        <select name="quranReadingQuality" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
-                            <option value="">Select / منتخب کریں</option>
-                            <option value="Excellent">بہترین / Excellent</option>
-                            <option value="Good">اچھی / Good</option>
-                            <option value="Average">اوسط / Average</option>
-                            <option value="Needs Improvement">بہتری کی ضرورت / Needs Improvement</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">How much Quran is memorized? / اس وقت کتنا قرآن پاک صحیح یاد ہے؟</label>
-                        <input type="text" name="quranMemorized" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent" placeholder="پارہ/سیپارہ بتائیں">
+
+                    <!-- Reference 2 -->
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-gray-700 mb-3">Reference 2</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-1">Name</label>
+                                <input type="text" name="ref2Name" required class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-1">Relationship</label>
+                                <input type="text" name="ref2Relation" required class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-1">Contact Number</label>
+                                <input type="tel" name="ref2Contact" required class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-500 mb-1">Email</label>
+                                <input type="email" name="ref2Email" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Health Information -->
+            <!-- 7. Documents -->
             <section>
                 <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2 flex items-center">
                     <span class="bg-brand-teal text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">7</span>
-                    Health Information / صحت کی معلومات
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Any Illness/Disability / کوئی بیماری/معذوری</label>
-                        <select name="hasIllness" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
-                            <option value="No">نہیں / No</option>
-                            <option value="Yes">ہاں / Yes</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">If Yes, Details / اگر ہاں تو تفصیل</label>
-                        <input type="text" name="illnessDetails" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent" placeholder="بیماری/معذوری کی تفصیل لکھیں">
-                    </div>
-                </div>
-            </section>
-
-            <!-- Documents Upload -->
-            <section>
-                <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2 flex items-center">
-                    <span class="bg-brand-teal text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">8</span>
                     Documents / دستاویزات
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Student Photo / طالب علم کی تصویر</label>
-                        <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-lg hover:border-brand-teal transition-colors">
-                            <div class="space-y-1 text-center">
-                                <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
-                                    <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                <div class="flex text-sm text-gray-600">
-                                    <label class="relative cursor-pointer bg-white rounded-md font-medium text-brand-teal hover:text-brand-darkTeal focus-within:outline-none">
-                                        <span>Upload a file</span>
-                                        <input type="file" name="studentImage" accept="image/*" class="sr-only">
-                                    </label>
-                                </div>
-                                <p class="text-xs text-gray-500">PNG, JPG up to 5MB</p>
-                            </div>
-                        </div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Student's Photo / طالب علم کی تصویر</label>
+                        <input type="file" name="studentImage" accept="image/*" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
+                        <p class="text-xs text-gray-500 mt-1">Upload a recent passport size photograph</p>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Documents (B-Form/CNIC) / دستاویزات</label>
-                        <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-lg hover:border-brand-teal transition-colors">
-                            <div class="space-y-1 text-center">
-                                <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
-                                    <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                <div class="flex text-sm text-gray-600">
-                                    <label class="relative cursor-pointer bg-white rounded-md font-medium text-brand-teal hover:text-brand-darkTeal focus-within:outline-none">
-                                        <span>Upload a file</span>
-                                        <input type="file" name="documentFile" accept=".pdf,image/*" class="sr-only">
-                                    </label>
-                                </div>
-                                <p class="text-xs text-gray-500">PDF, PNG, JPG up to 5MB</p>
-                            </div>
-                        </div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">CNIC/B-Form Copy / شناختی کارڈ/ب فارم کی کاپی</label>
+                        <input type="file" name="documentFile" accept=".pdf,.jpg,.jpeg,.png" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent">
                     </div>
                 </div>
             </section>
 
-            <!-- Pledge/Oath -->
-            <section>
-                <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2 flex items-center">
-                    <span class="bg-brand-teal text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">9</span>
-                    Pledge / حلف
-                </h3>
-                <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
-                    <p class="text-gray-700 font-urdu text-right leading-relaxed mb-4" dir="rtl">
-                        میں عہد کرتاہوں کہ طالب علم اپنی تعلیم دورہ حدیث تک ادارہ ہذا میں مکمل کرے گا۔ روزانہ کے اسباق روزانہ یاد کرکے سنائے گا غیر حاضری سے اجتناب کرکے سالانہ 80% حاضری کو یقینی بنائے گا اورمیں نے جان لیاہے کہ طالب علم عامہ عریبک پڑھے گااور عامہ انگلش پڑھے گا عصری تعلیم کے امتحانات صرف ادارے کی پالیسی کے مطابق دےگا۔ اپنے تعلیمی، تربیتی ورہائشی اخراجات کے لئے صدقات واجبہ کا انتظامیہ ادارہ ہٰذا کو وکیل بناتا ہوں۔
-                    </p>
-                    <div class="flex items-center mt-4">
-                        <input type="checkbox" name="pledgeAccepted" id="pledgeAccepted" required class="h-5 w-5 text-brand-teal focus:ring-brand-teal border-gray-300 rounded">
-                        <label for="pledgeAccepted" class="ml-3 text-sm text-gray-700">
-                            I agree to the above pledge / میں مندرجہ بالا حلف سے متفق ہوں
-                        </label>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Admission Guidelines -->
-            <section>
-                <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2 flex items-center">
-                    <span class="bg-brand-teal text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">10</span>
-                    Admission Guidelines / ہدایات برائے داخلہ
-                </h3>
-                <div class="bg-green-50 p-6 rounded-lg border border-green-200">
-                    <h4 class="font-semibold text-gray-800 mb-3 font-urdu text-right" dir="rtl">داخلہ فارم کے ساتھ مندرجہ ذیل دستاویزات منسلک ہوں:</h4>
-                    <ul class="list-disc list-inside text-gray-700 space-y-2 font-urdu text-right" dir="rtl">
-                        <li>والد/سرپرست کے شناختی کارڈ کی کاپی</li>
-                        <li>طالب علم کی ب فارم/شناختی کارڈ کی کاپی</li>
-                        <li>دو عدد تازہ تصاویر</li>
-                        <li>تعلیمی اسناد کی کاپی</li>
-                    </ul>
-                    
-                    <h4 class="font-semibold text-gray-800 mt-6 mb-3 font-urdu text-right" dir="rtl">طریقہ کار داخلہ:</h4>
-                    <ol class="list-decimal list-inside text-gray-700 space-y-2 font-urdu text-right" dir="rtl">
-                        <li>درخواست برائے داخلہ بمعہ دستاویزات ایک فولڈر میں لگا کر انچارچ داخلہ سیل کے پاس جمع کرائیں جائیں۔</li>
-                        <li>انچارچ داخلہ سیل طالب علم کے تحریری امتحان کا انعقاد کرے گا اور نمبر لگوائے گا، قرآن پاک سنے گا اور یاداشت ٹیسٹ کے لیے مختصر حدیث دے کر یاد کروائے گا اور رپورٹ دے گا۔</li>
-                        <li>انچارچ داخلہ سیل داخلہ فارم، دستاویزات، امتحانی پیپر فولڈر میں لگا کر داخلہ کمیٹی کے پاس جمع کروائے گا۔</li>
-                        <li>داخلہ کمیٹی طالب علم کا زبانی امتحان لے گی، طالب علم اور والد/سرپرست سے انٹرویو کرے گی۔</li>
-                    </ol>
+            <!-- 8. Declaration -->
+            <section class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Declaration / اقرار نامہ</h3>
+                <div class="space-y-4">
+                    <label class="flex items-start space-x-3">
+                        <input type="checkbox" name="declaration" required class="mt-1 h-4 w-4 text-brand-teal border-gray-300 rounded focus:ring-brand-teal">
+                        <span class="text-sm text-gray-700">
+                            I hereby declare that the information provided is accurate and true. I understand that any false information may lead to the cancellation of my application.
+                            <br>
+                            میں حلفیہ بیان کرتا ہوں کہ فراہم کردہ معلومات درست ہیں۔ میں سمجھتا ہوں کہ کوئی بھی غلط معلومات میری درخواست منسوخ ہونے کا باعث بن سکتی ہیں۔
+                        </span>
+                    </label>
                 </div>
             </section>
 
             <!-- Submit Button -->
             <div class="pt-6">
-                <button type="submit" id="submitButton" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-brand-teal hover:bg-brand-darkTeal focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-teal transition-colors">
-                    Submit Application / درخواست جمع کروائیں
+                <button type="submit" id="submitButton" class="w-full bg-brand-teal text-white py-3 px-6 rounded-lg text-lg font-semibold hover:bg-brand-darkTeal transition-colors shadow-lg flex items-center justify-center">
+                    <span>Submit Application / درخواست جمع کروائیں</span>
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
                 </button>
             </div>
         </form>
+
     </div>
 </div>
-<script type="module" src="js/admission.js"></script>
+<script type="module" src="js/scholarship.js"></script>
 <footer itemtype="https://schema.org/WPFooter" itemscope="itemscope" id="colophon" role="contentinfo">
             <div class="footer-width-fixer">
                 <div data-elementor-type="wp-post" data-elementor-id="34" class="elementor elementor-34">

@@ -1,20 +1,20 @@
 import { db, storage, collection, addDoc, ref, uploadBytes, getDownloadURL } from './firebase-config.js';
 
-const admissionForm = document.getElementById('admissionForm');
+const scholarshipForm = document.getElementById('scholarshipForm');
 const loadingOverlay = document.getElementById('loadingOverlay');
 const successMessage = document.getElementById('successMessage');
 const errorMessage = document.getElementById('errorMessage');
 const errorText = document.getElementById('errorText');
 const submitButton = document.getElementById('submitButton');
 
-if (admissionForm) {
-    admissionForm.addEventListener('submit', async (e) => {
+if (scholarshipForm) {
+    scholarshipForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         setLoading(true);
         hideError();
 
         try {
-            const formData = new FormData(admissionForm);
+            const formData = new FormData(scholarshipForm);
             const data = Object.fromEntries(formData.entries());
 
             // 1. Upload Images
@@ -23,12 +23,12 @@ if (admissionForm) {
 
             const studentImageFile = formData.get('studentImage');
             if (studentImageFile && studentImageFile.name) {
-                studentImageUrl = await uploadFile(studentImageFile, 'student_images');
+                studentImageUrl = await uploadFile(studentImageFile, 'scholarship_images');
             }
 
             const documentFile = formData.get('documentFile');
             if (documentFile && documentFile.name) {
-                documentUrl = await uploadFile(documentFile, 'documents');
+                documentUrl = await uploadFile(documentFile, 'scholarship_documents');
             }
 
             // 2. Prepare Data for Firestore
@@ -37,6 +37,7 @@ if (admissionForm) {
                 studentImage: studentImageUrl,
                 documentFile: documentUrl,
                 submittedAt: new Date(),
+                type: 'scholarship' // Tag as scholarship
             };
 
             // Remove file objects from data to be saved
@@ -44,10 +45,10 @@ if (admissionForm) {
             delete submissionData.documentFileObj;
 
             // 3. Save to Firestore
-            await addDoc(collection(db, "admissions"), submissionData);
+            await addDoc(collection(db, "scholarships"), submissionData);
 
             showSuccess();
-            admissionForm.reset();
+            scholarshipForm.reset();
             window.scrollTo(0, 0);
 
         } catch (err) {
@@ -85,7 +86,7 @@ function setLoading(isLoading) {
 
 function showSuccess() {
     successMessage.classList.remove('hidden');
-    admissionForm.classList.add('hidden');
+    scholarshipForm.classList.add('hidden');
 }
 
 function showError(msg) {
@@ -101,6 +102,6 @@ function hideError() {
 // Reset form handler
 window.resetForm = function () {
     successMessage.classList.add('hidden');
-    admissionForm.classList.remove('hidden');
-    admissionForm.reset();
+    scholarshipForm.classList.remove('hidden');
+    scholarshipForm.reset();
 }
